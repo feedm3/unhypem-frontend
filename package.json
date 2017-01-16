@@ -1,0 +1,51 @@
+{
+  "name": "Unhypem",
+  "version": "1.0.0",
+  "description": "Explore the hypem charts like a pro",
+  "homepage": "https://unhypem.com/",
+  "author": "Fabian Dietenberger <piano.fabian@t-online.de>",
+  "private": true,
+  "scripts": {
+    "postinstall": "webpack --progress --colors",
+    "start": "webpack-dev-server",
+    "build": "webpack --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:feedm3/unhypem.git"
+  },
+  "bugs": {
+    "url": "https://github.com/feedm3/unhypem/issues"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-lodash": "^3.1.4",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-register": "^6.18.0",
+    "css-loader": "^0.25",
+    "dotenv": "^4.0.0",
+    "eslint": "^3.9.0",
+    "eslint-plugin-react": "^6.2.0",
+    "eslint-plugin-standard": "^2.0.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "flux": "^2.1.1",
+    "lodash": "^4.13.1",
+    "moment": "^2.15.2",
+    "react-dom": "^15.1.0",
+    "react-router": "^2.5.1",
+    "react-tether": "^0.5.2",
+    "request": "^2.76.0",
+    "soundmanager2": "^2.97.20150601-a",
+    "style-loader": "^0.13.1",
+    "tether-tooltip": "^1.2.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-svgstore-plugin": "^2.2.2"
+  },
+  "engines": {
+    "node": ">=7.4"
+  }
+}
