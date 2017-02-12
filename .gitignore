@@ -58,8 +58,8 @@ node_modules
 
 ### Custom
 .env
-src/bundle.js
-src/bundle.js.map
-src/styles.css
-src/styles.css.map
-src/*sprite.svg
+www/bundle.js
+www/bundle.js.map
+www/styles.css
+www/styles.css.map
+www/*sprite.svg
