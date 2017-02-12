@@ -29,10 +29,10 @@ function requestSongs(done) {
 
     // in production the host is the same as the page but in development mode the host is
     // on a different port
-    let host = '/';
-    if (window.location.hostname === 'localhost') {
-        host = 'http://localhost:3000/';
-    }
+    let host = 'https://unhypem-backend.herokuapp.com/';
+    // if (window.location.hostname === 'localhost') {
+    //     host = 'http://localhost:3000/';
+    // }
 
     request.get(host + 'popular')
         .end((err, response) => {

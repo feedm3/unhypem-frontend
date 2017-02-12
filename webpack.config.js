@@ -35,7 +35,7 @@ if (process.env.NODE_ENV === 'production') {
 module.exports = {
     devtool: devtool,
     entry: [
-        './src/main.js'
+        './src/app/main.js'
     ],
     output: {
         path: path.resolve(__dirname, './www'),
