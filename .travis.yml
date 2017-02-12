@@ -1,3 +1,18 @@
+sudo: false
 language: node_js
 node_js:
-  - "6.5"
+  - "node"
+cache: yarn
+env;
+  global:
+    - NODE_ENV=production
+    - AWS_DEFAULT_REGION=eu-central-1
+install:
+  - curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+  - unzip awscli-bundle.zip
+  - ./awscli-bundle/install -b ~/bin/aws
+  - export PATH=~/bin:$PATH
+script:
+  - aws s3 sync www s3://unhypem-website --delete
+  - aws configure set preview.cloudfront true
+  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
