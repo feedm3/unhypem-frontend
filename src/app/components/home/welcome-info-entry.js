@@ -7,7 +7,7 @@
 import React from 'react';
 import InfoEntry from './info-entry';
 
-export default class WelcomeEntry extends React.Component {
+export default class WelcomeInfoEntry extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -21,6 +21,6 @@ export default class WelcomeEntry extends React.Component {
         );
     }
 }
-WelcomeEntry.propTypes = {
+WelcomeInfoEntry.propTypes = {
     timestamp: React.PropTypes.string.isRequired
 };

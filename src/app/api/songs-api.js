@@ -39,7 +39,17 @@ function requestSongs(done) {
             if (err) throw err;
 
             const popular = JSON.parse(response.text);
-            songsInfo.songs = popular.songs;
+
+            const songsArray = [];
+            for (let i = 1; i <= 50; i++) {
+                const song = popular.songs[i];
+                song.id = song.hypemMediaId;
+                song.position = i;
+                song.duration = song.durationInSeconds * 1000;
+                songsArray.push(song);
+            }
+
+            songsInfo.songs = songsArray;
             songsInfo.timestamp = popular.timestamp;
 
             callbacks.forEach(done => done());
