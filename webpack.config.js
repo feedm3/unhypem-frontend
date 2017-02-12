@@ -15,7 +15,7 @@ plugins.push(new ExtractTextPlugin('styles.css', {
     allChunks: true
 }));
 plugins.push(new SvgStore(
-    path.join(__dirname, '/www/assets', '**/*.svg'), // input path
+    path.join(__dirname, '/src/assets', '**/*.svg'), // input path
     '', // output path
     {
         name: '[hash].sprite.svg',
@@ -35,7 +35,7 @@ if (process.env.NODE_ENV === 'production') {
 module.exports = {
     devtool: devtool,
     entry: [
-        './www/app/main.js'
+        './src/main.js'
     ],
     output: {
         path: path.resolve(__dirname, './www'),
@@ -45,7 +45,7 @@ module.exports = {
     devServer: {
         inline: true,
         port: 3333,
-        contentBase: 'www'
+        contentBase: 'src'
     },
     plugins: plugins,
     module: {
