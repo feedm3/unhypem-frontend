@@ -14,7 +14,7 @@ install:
   - npm install
 
 script:
-  - npm run build
+  - npm run build:travis
 
 after_success:
   - aws s3 sync www s3://unhypem-website --delete
