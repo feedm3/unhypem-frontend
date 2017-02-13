@@ -6,7 +6,6 @@
   "author": "Fabian Dietenberger <piano.fabian@t-online.de>",
   "private": true,
   "scripts": {
-    "postinstall": "webpack --progress --colors",
     "start": "webpack-dev-server",
     "build": "webpack --progress --colors"
   },
