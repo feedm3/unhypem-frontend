@@ -11,10 +11,10 @@ install:
   - unzip awscli-bundle.zip
   - ./awscli-bundle/install -b ~/bin/aws
   - export PATH=~/bin:$PATH
-  - npm install
+  - npm install --production=false
 
 script:
-  - npm run build:travis
+  - npm run build
 
 after_success:
   - aws s3 sync www s3://unhypem-website --delete
