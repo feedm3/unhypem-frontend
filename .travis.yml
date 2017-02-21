@@ -1,6 +1,7 @@
 language: node_js
 node_js:
   - "node"
+cache: yarn
 env:
   global:
     - NODE_ENV=production
@@ -11,10 +12,10 @@ install:
   - unzip awscli-bundle.zip
   - ./awscli-bundle/install -b ~/bin/aws
   - export PATH=~/bin:$PATH
-  - npm install --production=false
+  - yarn install --production=false
 
 script:
-  - npm run build
+  - yarn run build
 
 after_success:
   - aws s3 sync www s3://unhypem-website --delete

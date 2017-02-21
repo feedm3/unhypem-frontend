@@ -11,10 +11,10 @@ This repo is used for all unhypem frontend stuff.
 
 You can start the dev server with
 ```
-npm start
+yarn start
 ```
 
 To build the project into the _www_ folder, hit
 ```
-npm run build
+yarn run build
 ```
