@@ -12,6 +12,7 @@ install:
   - unzip awscli-bundle.zip
   - ./awscli-bundle/install -b ~/bin/aws
   - export PATH=~/bin:$PATH
+  - npm install yarn -g
   - yarn install --production=false
 
 script:
