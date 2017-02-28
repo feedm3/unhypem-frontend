@@ -9,7 +9,7 @@ import WelcomeInfoEntry from './welcome-info-entry';
 import ShortcutsInfoEntry from './shortcuts-info-entry';
 import songDispatcher from '../../dispatcher/song-dispatcher';
 import ACTION from '../../constants/action';
-import moment from 'moment/min/moment.min';
+import moment from 'moment';
 
 export default class Home extends React.Component {
     constructor(props) {

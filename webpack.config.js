@@ -12,6 +12,7 @@ plugins.push(new ExtractTextPlugin({
     filename: 'styles.css',
     allChunks: true
 }));
+plugins.push(new webpack.IgnorePlugin(/(locale)/, /node_modules.+(momentjs)/));
 
 if (process.env.NODE_ENV === 'production') {
     devtool = 'source-map';
