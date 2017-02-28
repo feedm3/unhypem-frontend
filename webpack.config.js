@@ -1,25 +1,40 @@
 'use strict';
 
 require('dotenv').config();
-
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const plugins = [];
-let devtool = 'eval-source-map';
+let devtool = 'cheap-module-source-map';
 
-plugins.push(new ExtractTextPlugin('styles.css', {
-    publicPath: '/styles/',
+plugins.push(new ExtractTextPlugin({
+    filename: 'styles.css',
     allChunks: true
 }));
 
 if (process.env.NODE_ENV === 'production') {
-    plugins.push(new webpack.optimize.UglifyJsPlugin({minimize: true, compress: {warnings: false}}));
-    plugins.push(new webpack.optimize.DedupePlugin());
+    devtool = 'source-map';
+
+    plugins.push(new webpack.optimize.UglifyJsPlugin({
+        beautify: false,
+        mangle: {
+            screw_ie8: true,
+            keep_fnames: true
+        },
+        compress: {
+            screw_ie8: true,
+            warnings: false
+        },
+        comments: false,
+        sourceMap: true
+    }));
+    plugins.push(new webpack.LoaderOptionsPlugin({
+        minimize: true,
+        debug: false
+    }));
     plugins.push(new webpack.optimize.OccurrenceOrderPlugin());
     plugins.push(new webpack.DefinePlugin({'process.env': {NODE_ENV: JSON.stringify('production')}}));
-    devtool = 'source-map';
 }
 
 module.exports = {
@@ -39,22 +54,24 @@ module.exports = {
     },
     plugins: plugins,
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 query: {
                     presets: ['es2015', 'react']
                 }
             },
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+                loader: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: "css-loader"})
             },
             {
                 test: /\.svg$/,
-                loader: 'svg-sprite?' + JSON.stringify({
+                loader: 'svg-sprite-loader?' + JSON.stringify({
                     name: '[name]_[hash]'
                 })
             },
