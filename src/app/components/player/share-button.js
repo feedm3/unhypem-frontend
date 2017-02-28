@@ -7,6 +7,7 @@
 import React from 'react';
 import TetherComponent from 'react-tether';
 import SvgIcon from '../common/svg-icon';
+import shareIcon from '../../../assets/img/ic_share_black_24px.svg';
 
 export default class ShareButton extends React.Component {
     constructor(props) {
@@ -31,7 +32,7 @@ export default class ShareButton extends React.Component {
                         attachment: 'both'
                     }]}>
                     <SvgIcon
-                        id='ic_share_black_24px'
+                        id={shareIcon}
                         title='Share'
                         width='24px'
                         height='24px'

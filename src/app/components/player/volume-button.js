@@ -9,6 +9,9 @@ import VolumePopup from './volume-popup';
 import songDispatcher from '../../dispatcher/song-dispatcher';
 import ACTION from '../../constants/action';
 import SvgIcon from '../common/svg-icon';
+import volumeUpIcon from '../../../assets/img/ic_volume_up_black_24px.svg';
+import volumeDownIcon from '../../../assets/img/ic_volume_down_black_24px.svg';
+import volumeOffIcon from '../../../assets/img/ic_volume_off_black_24px.svg';
 
 export default class VolumeButton extends React.Component {
     constructor(props) {
@@ -34,13 +37,13 @@ export default class VolumeButton extends React.Component {
     }
 
     render() {
-        let volumeIcon = 'ic_volume_up_black_24px';
+        let volumeIcon = volumeUpIcon;
         if (this.state.volume === 0) {
-            volumeIcon = 'ic_volume_off_black_24px';
+            volumeIcon = volumeOffIcon;
         } else if (this.state.volume > 0 && this.state.volume < 50) {
-            volumeIcon = 'ic_volume_down_black_24px';
+            volumeIcon = volumeDownIcon;
         } else if (this.state.volume >= 50) {
-            volumeIcon = 'ic_volume_up_black_24px';
+            volumeIcon = volumeUpIcon;
         }
 
         return (

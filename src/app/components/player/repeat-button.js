@@ -5,10 +5,11 @@
 'use strict';
 
 import React from 'react';
-import SvgIcon from '../common/svg-icon';
 import SimpleTooltip from '../common/simple-tooltip';
 import ACTION from '../../constants/action';
 import songDispatcher from '../../dispatcher/song-dispatcher';
+import SvgIcon from '../common/svg-icon';
+import repeatIcon from '../../../assets/img/ic_repeat_one_black_24px.svg';
 
 export default class RepeatButton extends React.Component {
     constructor(props) {
@@ -33,7 +34,7 @@ export default class RepeatButton extends React.Component {
         return (
             <SimpleTooltip text='Repeat current song'>
                 <SvgIcon
-                    id='ic_repeat_one_black_24px'
+                    id={repeatIcon}
                     title='Repeat'
                     width='24px'
                     height='24px'

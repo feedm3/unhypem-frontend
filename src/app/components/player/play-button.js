@@ -9,6 +9,8 @@ import songDispatcher from '../../dispatcher/song-dispatcher';
 import ACTION from '../../constants/action';
 import SONG_STATE from '../../constants/song-state';
 import SvgIcon from '../common/svg-icon';
+import playIcon from '../../../assets/img/ic_play_circle_filled_black_24px.svg';
+import pauseIcon from '../../../assets/img/ic_pause_circle_filled_black_24px.svg';
 
 export default class PlayButton extends React.Component {
     constructor(props) {
@@ -40,10 +42,10 @@ export default class PlayButton extends React.Component {
     }
 
     render() {
-        let playOrPauseIcon = 'ic_play_circle_filled_black_24px';
+        let playOrPauseIcon = playIcon;
         let playIconClass = 'clr-primary';
         if (this.state.songState === SONG_STATE.PLAYING) {
-            playOrPauseIcon = 'ic_pause_circle_filled_black_24px';
+            playOrPauseIcon = pauseIcon;
             playIconClass = '';
         }
         return (

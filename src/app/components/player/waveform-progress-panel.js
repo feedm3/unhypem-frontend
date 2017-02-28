@@ -5,7 +5,6 @@
 'use strict';
 
 import React from 'react';
-import songDispatcher from '../../dispatcher/song-dispatcher';
 
 export default class ProgressPanel extends React.Component {
     constructor(props) {

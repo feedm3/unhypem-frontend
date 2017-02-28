@@ -5,7 +5,6 @@ require('dotenv').config();
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const SvgStore = require('webpack-svgstore-plugin');
 
 const plugins = [];
 let devtool = 'eval-source-map';
@@ -14,15 +13,6 @@ plugins.push(new ExtractTextPlugin('styles.css', {
     publicPath: '/styles/',
     allChunks: true
 }));
-plugins.push(new SvgStore(
-    path.join(__dirname, '/src/assets', '**/*.svg'), // input path
-    '', // output path
-    {
-        name: '[hash].sprite.svg',
-        chunk: 'main',
-        prefix: ''
-    }
-));
 
 if (process.env.NODE_ENV === 'production') {
     plugins.push(new webpack.optimize.UglifyJsPlugin({minimize: true, compress: {warnings: false}}));
@@ -61,6 +51,12 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-sprite?' + JSON.stringify({
+                    name: '[name]_[hash]'
+                })
             },
             {
                 test: /\.(png|woff|woff2|eot|ttf)$/,

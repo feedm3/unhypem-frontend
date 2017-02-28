@@ -16,8 +16,6 @@ export default class SvgIcon extends React.Component {
         let iconStyleNames = this.props.className ? this.props.className + ' svg-icon ' : 'svg-icon ';
         this.props.onClick ? iconStyleNames += ' svg-icon-clickable' : null;
 
-        const svgId = this.props.id[0] === '#' ? this.props.id : '#' + this.props.id;
-
         return (
             <svg className={iconStyleNames}
                  style={this.props.style}
@@ -29,8 +27,7 @@ export default class SvgIcon extends React.Component {
                 <title id="title">{this.props.title}</title>
                 <use width={this.props.width}
                      height={this.props.height}
-                     xlinkHref={svgId}
-                />
+                     xlinkHref={this.props.id}/>
             </svg>
         );
     }
