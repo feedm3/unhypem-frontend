@@ -14,8 +14,8 @@ export default class InfoEntry extends React.Component {
     render() {
         return (
             <div className={this.props.className}>
-                <div className='info-entry-header' >{this.props.header}</div>
-                <div className='info-entry-body'>{this.props.body}</div>
+                <div className='info-entry-header'>{ this.props.header }</div>
+                <div className='info-entry-body'>{ this.props.body }</div>
             </div>
         );
     }

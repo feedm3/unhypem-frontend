@@ -40,18 +40,18 @@ export default class ShuffleButton extends React.Component {
 
     render() {
         const isActive = this.state.playlistState === PLAYLIST_STATE.SHUFFLE_NEXT_SONG;
-        const isActiveStyle = isActive ? {'': ''} : {'opacity': '0.5'};
+        const isActiveStyle = isActive ? { '': '' } : { 'opacity': '0.5' };
         return (
-                <SimpleTooltip text='Random next song'>
-                    <SvgIcon
-                        id={shuffleIcon}
-                        title='Shuffle'
-                        width='24px'
-                        height='24px'
-                        style={isActiveStyle}
-                        onClick={() => this.handleClick()}
-                    />
-                </SimpleTooltip>
+            <SimpleTooltip text='Random next song'>
+                <SvgIcon
+                    id={shuffleIcon}
+                    title='Shuffle'
+                    width='24px'
+                    height='24px'
+                    style={isActiveStyle}
+                    onClick={() => this.handleClick()}
+                />
+            </SimpleTooltip>
         );
     }
 }

@@ -122,7 +122,7 @@ const SongDispatcher = {
 
     registerOnAllSongsUpdate(id, callback) {
         this.checkCallbackArgument(id, callback);
-        onAllSongsUpdateCallbacks.push({id, callback});
+        onAllSongsUpdateCallbacks.push({ id, callback });
     },
 
     removeOnALlSongsUpdate(id) {
@@ -135,7 +135,7 @@ const SongDispatcher = {
 
     registerOnCurrentSongUpdate(id, callback) {
         this.checkCallbackArgument(id, callback);
-        onCurrentSongUpdateCallbacks.push({id, callback});
+        onCurrentSongUpdateCallbacks.push({ id, callback });
     },
 
     removeOnCurrentSongUpdate(id) {

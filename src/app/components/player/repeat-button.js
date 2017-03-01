@@ -29,7 +29,7 @@ export default class RepeatButton extends React.Component {
 
     render() {
         const isActive = this.state.repeatCurrentSong;
-        const isActiveStyle = isActive ? {'': ''} : {'opacity': '0.5'};
+        const isActiveStyle = isActive ? { '': '' } : { 'opacity': '0.5' };
 
         return (
             <SimpleTooltip text='Repeat current song'>

@@ -14,10 +14,10 @@ export default class WelcomeInfoEntry extends React.Component {
 
     render() {
         const body = <div>The charts are based on the <a className='no-link-style' href='http://hypem.com/popular' target='_blank'>hypem popular</a> charts.
-            Last update was {this.props.timestamp}.</div>;
+            Last update was { this.props.timestamp }.</div>;
 
         return (
-            <InfoEntry header='Welcome' body={body}/>
+            <InfoEntry header='Welcome' body={ body }/>
         );
     }
 }

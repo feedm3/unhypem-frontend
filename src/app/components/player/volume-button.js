@@ -24,16 +24,16 @@ export default class VolumeButton extends React.Component {
     toggleVolumePopup() {
         const volumePopup = this.refs.volumePopup;
         const isVisisble = volumePopup.state.visible;
-        volumePopup.setState({visible: !isVisisble});
+        volumePopup.setState({ visible: !isVisisble });
     }
 
     showVolumePopup() {
-        this.refs.volumePopup.setState({visible: true});
+        this.refs.volumePopup.setState({ visible: true });
     }
 
     onVolumeChange(percent) {
         songDispatcher.dispatch(ACTION.CHANGE_VOLUME, percent);
-        this.setState({volume: percent});
+        this.setState({ volume: percent });
     }
 
     render() {
@@ -53,13 +53,21 @@ export default class VolumeButton extends React.Component {
                     title="Volume"
                     width="24px"
                     height="24px"
-                    onMouseEnter={() => { this.showVolumePopup(); }}
-                    onClick={() => { this.toggleVolumePopup(); }}
+                    onMouseEnter={() => {
+                        this.showVolumePopup();
+                    }}
+                    onClick={() => {
+                        this.toggleVolumePopup();
+                    }}
                 />
                 <VolumePopup
                     ref='volumePopup'
-                    onMouseLeave={() => { this.toggleVolumePopup(); }}
-                    onProgressChange={(percent) => { this.onVolumeChange(percent); }}/>
+                    onMouseLeave={() => {
+                        this.toggleVolumePopup();
+                    }}
+                    onProgressChange={(percent) => {
+                        this.onVolumeChange(percent);
+                    }}/>
             </div>
         );
     }

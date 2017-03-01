@@ -34,8 +34,8 @@ class DurationLabel extends React.Component {
         const duration = secondFormatter(this.state.duration);
         return (
             <div className="duration">
-                <div>{position}</div>
-                <div>{duration}</div>
+                <div>{ position }</div>
+                <div>{ duration }</div>
             </div>
         );
     }

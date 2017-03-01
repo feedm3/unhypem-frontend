@@ -17,17 +17,17 @@ export default class SvgIcon extends React.Component {
         this.props.onClick ? iconStyleNames += ' svg-icon-clickable' : null;
 
         return (
-            <svg className={iconStyleNames}
-                 style={this.props.style}
-                 width={this.props.width}
-                 height={this.props.height}
-                 onClick={this.props.onClick}
-                 onMouseEnter={this.props.onMouseEnter}
+            <svg className={ iconStyleNames }
+                 style={ this.props.style }
+                 width={ this.props.width }
+                 height={ this.props.height }
+                 onClick={ this.props.onClick }
+                 onMouseEnter={ this.props.onMouseEnter }
                  aria-labelledby="title">
-                <title id="title">{this.props.title}</title>
-                <use width={this.props.width}
-                     height={this.props.height}
-                     xlinkHref={this.props.id}/>
+                <title id="title">{ this.props.title }</title>
+                <use width={ this.props.width }
+                     height={ this.props.height }
+                     xlinkHref={ this.props.id }/>
             </svg>
         );
     }

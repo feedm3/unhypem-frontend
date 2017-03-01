@@ -12,6 +12,7 @@
 import React from 'react';
 import SimpleTooltip from '../common/simple-tooltip';
 import SvgIcon from '../common/svg-icon';
+import soundcloudIcon from '../../../assets/img/ic_soundcloud-black.svg';
 
 export default class SongTableRow extends React.Component {
     constructor(props) {
@@ -30,8 +31,8 @@ export default class SongTableRow extends React.Component {
     }
 
     render() {
-        const {song, selected} = this.props;
-        const {isSelected, usePropsToSelect} = this.state;
+        const { song, selected } = this.props;
+        const { isSelected, usePropsToSelect } = this.state;
 
         let rowStyle = 'white';
         let tooltip = '';
@@ -56,26 +57,28 @@ export default class SongTableRow extends React.Component {
         }
 
         return (
-            <tr className={rowStyle} onClick={ () => { this.props.onClick(); }} title={tooltip}>
+            <tr className={ rowStyle } onClick={ () => {
+                this.props.onClick();
+            }} title={ tooltip }>
                 <td className="vertical-center text-center">
                     <SimpleTooltip
-                        text={`❤ ${song.hypemLovedCount}`}
+                        text={ `❤ ${song.hypemLovedCount}` }
                         attachment='bottom center'>
-                        <span>{song.position}</span>
+                        <span>{ song.position }</span>
                     </SimpleTooltip>
                 </td>
                 <td className="vertical-center hidden-xs">
                     <SvgIcon
-                        id='ic_soundcloud-black'
+                        id={ soundcloudIcon }
                         title='Soundcloud'
                         width='32'
                         height='32'
-                        className={soundcloudLogoStyle}
-                        onClick={soundcloudClickHandler}
+                        className={ soundcloudLogoStyle }
+                        onClick={ soundcloudClickHandler }
                     />
                 </td>
-                <td className="vertical-center">{song.artist}</td>
-                <td className="vertical-center"><strong>{song.title}</strong></td>
+                <td className="vertical-center">{ song.artist }</td>
+                <td className="vertical-center"><strong>{ song.title }</strong></td>
             </tr>
         );
     }

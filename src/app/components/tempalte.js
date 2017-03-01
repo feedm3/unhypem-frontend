@@ -18,10 +18,10 @@ export default class Template extends React.Component {
             <div>
                 <Header />
                 <div className="container">
-                    {this.props.children}
+                    { this.props.children }
                 </div>
                 <div className="bottom">
-                    { /* put this in own bottom component */ }
+                    { /* TODO: put this in own bottom component */ }
                     <SongPlayer />
                 </div>
             </div>

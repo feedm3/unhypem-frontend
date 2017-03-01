@@ -37,7 +37,9 @@ export default class VolumePopup extends React.Component {
                                defaultValue={this.state.progressPercent}
                                className="volume-input-range"
                                orient="vertical"
-                               onChange={(e) => { this.handleInputChange(e); }}/>
+                               onChange={(e) => {
+                                   this.handleInputChange(e);
+                               }}/>
                     </div>
                 </div>
             </div>

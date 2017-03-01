@@ -18,12 +18,17 @@ export default class ShareButton extends React.Component {
     }
 
     render() {
-        const soundcloudUrlStyle = this.props.soundcloudUrl ? {
+        const displayStyle = {
             display: 'block',
             paddingBottom: '5px'
-        } : {display: 'none'};
+        };
+        const hideStyle = {
+            display: 'none'
+        };
+        const soundcloudUrlStyle = this.props.soundcloudUrl ? displayStyle : hideStyle;
+
         return (
-            <div onClick={() => this.setState({popupVisible: !this.state.popupVisible}) }>
+            <div onClick={() => this.setState({ popupVisible: !this.state.popupVisible }) }>
                 <TetherComponent
                     attachment='bottom center'
                     offset='15px 0'
@@ -32,20 +37,20 @@ export default class ShareButton extends React.Component {
                         attachment: 'both'
                     }]}>
                     <SvgIcon
-                        id={shareIcon}
+                        id={ shareIcon }
                         title='Share'
                         width='24px'
                         height='24px'
-                        onMouseEnter={() => this.setState({popupVisible: true}) }
-                        onMouseLeave={() => this.setState({popupVisible: false}) }
+                        onMouseEnter={ () => this.setState({ popupVisible: true }) }
+                        onMouseLeave={ () => this.setState({ popupVisible: false }) }
                     />
                     {
                         this.state.popupVisible &&
                         <div>
-                            <div className='share-button-popup' onMouseLeave={() => this.setState({popupVisible: false}) }>
-                                <a href={this.props.soundcloudUrl}
+                            <div className='share-button-popup' onMouseLeave={ () => this.setState({ popupVisible: false }) }>
+                                <a href={ this.props.soundcloudUrl }
                                    target='_blank'
-                                   style={soundcloudUrlStyle}
+                                   style={ soundcloudUrlStyle }
                                    className='share-popup-link'>
                                     Open on soundcloud
                                 </a>
@@ -55,7 +60,7 @@ export default class ShareButton extends React.Component {
                                     Open on hypem
                                 </a>
                             </div>
-                            <div style={{marginBottom: '-5px'}} className="tether-tooltip-triangle"></div>
+                            <div style={{ marginBottom: '-5px' }} className="tether-tooltip-triangle"></div>
                         </div>
                     }
                 </TetherComponent>

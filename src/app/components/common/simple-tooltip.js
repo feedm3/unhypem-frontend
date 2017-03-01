@@ -7,7 +7,7 @@
  */
 
 'use strict';
- 
+
 import React from 'react';
 import TetherComponent from 'react-tether';
 
@@ -44,13 +44,13 @@ export default class SimpleTooltip extends React.Component {
 
         return (
             <TetherComponent {...props}>
-                <div onMouseEnter={() => this.setState({isOpen: true}) }
-                     onMouseLeave={() => this.setState({isOpen: false}) }>{this.props.children}</div>
+                <div onMouseEnter={ () => this.setState({ isOpen: true }) }
+                     onMouseLeave={ () => this.setState({ isOpen: false }) }>{ this.props.children }</div>
                 {
                     isOpen &&
                     <div className='tether-tooltip'>
-                        <div className='tether-tooltip-content'>{this.props.text}</div>
-                        <div className='tether-tooltip-triangle' style={triangleStyle}></div>
+                        <div className='tether-tooltip-content'>{ this.props.text }</div>
+                        <div className='tether-tooltip-triangle' style={ triangleStyle }></div>
                     </div>
                 }
             </TetherComponent>

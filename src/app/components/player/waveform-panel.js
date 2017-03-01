@@ -49,7 +49,7 @@ export default class WaveformPanel extends React.Component {
     render() {
         const wavefromUrl = this.state.waveformUrl;
         const waveformBackgroundStyle = wavefromUrl ? 'url(' + wavefromUrl + ')' : '';
-        const waveformStyle = {backgroundImage: waveformBackgroundStyle};
+        const waveformStyle = { backgroundImage: waveformBackgroundStyle };
 
         return (
             <div id='waveform-container' className='player-waveform-container' onClick={this.handleClick.bind(this)}

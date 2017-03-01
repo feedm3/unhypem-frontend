@@ -77,7 +77,7 @@ export default class SongTable extends React.Component {
         const currentSong = this.state.currentSong;
 
         const songTableRows = this.props.songs.map((song) => {
-            return <SongTableRow song={song} selected={currentSong.id === song.id} key={song.position} ref={song.id}
+            return <SongTableRow song={ song } selected={ currentSong.id === song.id } key={ song.position } ref={ song.id }
                                  onClick={ () => this.handleRowClick(song) }/>;
         });
 
@@ -93,7 +93,7 @@ export default class SongTable extends React.Component {
                     </tr>
                     </thead>
                     <tbody>
-                    {songTableRows}
+                    { songTableRows }
                     </tbody>
                 </table>
             </div>

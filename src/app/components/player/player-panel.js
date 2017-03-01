@@ -57,23 +57,23 @@ class PlayerPanel extends React.Component {
     }
 
     render() {
-        const {song} = this.state;
+        const { song } = this.state;
         return (
             <div>
                 <div className="container">
                     <div className="player-panel">
                         <div className="player-panel-col player-panel-col-song-position">
                             <SimpleTooltip
-                                text={`${song.artist} - ${song.title}`}
+                                text={ `${song.artist} - ${song.title}` }
                                 attachment='top left'
                                 targetAttachment='bottom left'>
-                                <strong>{song.position}</strong>
+                                <strong>{ song.position }</strong>
                             </SimpleTooltip>
                         </div>
                         <div className="player-panel-col-duration">
                             <DurationPanel />
                         </div>
-                        <div className="player-panel-col-btn" style={{'padding': '0'}}>
+                        <div className="player-panel-col-btn" style={{ 'padding': '0' }}>
                             <RewindButton />
                         </div>
                         <div className="player-panel-col-btn player-panel-col-btn-play">
@@ -92,9 +92,9 @@ class PlayerPanel extends React.Component {
                             <RepeatButton />
                         </div>
                         <div className="player-panel-col-btn">
-                            <ShareButton soundcloudUrl={song.soundcloudUrl} hypemMediaId={song.hypemMediaId}/>
+                            <ShareButton soundcloudUrl={ song.soundcloudUrl } hypemMediaId={ song.hypemMediaId }/>
                         </div>
-                        <div className="player-panel-col-btn hidden-xs" style={{'padding': '0'}}>
+                        <div className="player-panel-col-btn hidden-xs" style={{ 'padding': '0' }}>
                             <VolumeButton />
                         </div>
                     </div>

@@ -37,11 +37,11 @@ export default class Home extends React.Component {
         return (
             <div className='row'>
                 <div className='col-md-3 col-md-push-9'>
-                    <WelcomeInfoEntry timestamp={moment(timestamp).fromNow()}/>
+                    <WelcomeInfoEntry timestamp={ moment(timestamp).fromNow() }/>
                     <ShortcutsInfoEntry/>
                 </div>
                 <div className='col-md-9 col-md-pull-3'>
-                    <SongTable songs={songs} />
+                    <SongTable songs={ songs }/>
                 </div>
             </div>
         );

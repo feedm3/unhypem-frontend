@@ -26,6 +26,6 @@ export default () => {
     </table>;
 
     return (
-        <InfoEntry className='hidden-xs hidden-sm' header='Shortcuts' body={body}/>
+        <InfoEntry className='hidden-xs hidden-sm' header='Shortcuts' body={ body }/>
     );
 };

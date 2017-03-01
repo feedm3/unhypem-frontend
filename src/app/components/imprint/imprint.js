@@ -17,7 +17,7 @@ export default () => {
             <h2>Kontakt:</h2>
             <span>E-Mail: </span>
             <img src={contactMailSrc}/>
-            <p>Quelle: <em><a href={'http://www.e-recht24.de'} target={'_blank'}>http://www.e-recht24.de</a></em></p>
+            <p>Quelle: <em><a href={ 'http://www.e-recht24.de' } target={ '_blank' }>http://www.e-recht24.de</a></em></p>
 
             <h1>Haftungsausschluss (Disclaimer)</h1>
             <p><strong>Haftung für Inhalte</strong></p>

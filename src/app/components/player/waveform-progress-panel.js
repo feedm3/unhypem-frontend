@@ -14,19 +14,19 @@ export default class ProgressPanel extends React.Component {
             color: ''
         };
     }
-    
+
     updatePosition(position) {
-        this.setState({position: position});
+        this.setState({ position: position });
     }
 
     updateColor(color) {
-        this.setState({color: color});
+        this.setState({ color: color });
     }
 
     render() {
         return (
-            <div className="player-progressbar" style={{backgroundColor: this.state.color}}>
-                <div className="player-progressbar-progress" style={{width: this.state.position + '%'}}></div>
+            <div className="player-progressbar" style={{ backgroundColor: this.state.color }}>
+                <div className="player-progressbar-progress" style={{ width: this.state.position + '%' }}></div>
             </div>
         );
     }
