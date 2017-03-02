@@ -50,7 +50,7 @@ function requestSongs(done) {
             }
 
             songsInfo.songs = songsArray;
-            songsInfo.timestamp = popular.timestamp;
+            songsInfo.timestamp = popular.createdDate;
 
             callbacks.forEach(done => done());
             callbacks.length = 0; // clear the array
