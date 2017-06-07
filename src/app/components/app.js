@@ -6,19 +6,13 @@
 
 import React from 'react';
 import Template from './tempalte';
-import Home from './home/home';
-import About from './about/about';
-import Imprint from './imprint/imprint';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import { HashRouter } from 'react-router-dom';
 
 export default () => {
+    // TODO put everything from template component inside here
     return (
-        <Router history={ hashHistory }>
-            <Route path="/" component={ Template }>
-                <IndexRoute component={ Home }/>
-                <Route path="about" component={ About }/>
-                <Route path="imprint" component={ Imprint }/>
-            </Route>
-        </Router>
+        <HashRouter>
+            <Template />
+        </HashRouter>
     );
 };
