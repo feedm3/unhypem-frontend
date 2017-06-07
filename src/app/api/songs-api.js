@@ -34,7 +34,7 @@ function requestSongs(done) {
     //     host = 'http://localhost:3000/';
     // }
 
-    request.get(host + 'popular')
+    request.get(host + 'charts')
         .end((err, response) => {
             if (err) throw err;
 
