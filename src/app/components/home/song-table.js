@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDom from 'react-dom';
 import SongTableRow from './song-table-row';
 import Utils from '../common/utils';
@@ -110,5 +111,5 @@ export default class SongTable extends React.Component {
     }
 }
 SongTable.propTypes = {
-    songs: React.PropTypes.array.isRequired
+    songs: PropTypes.array.isRequired
 };

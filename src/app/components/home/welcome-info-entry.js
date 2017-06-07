@@ -5,6 +5,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import InfoEntry from './info-entry';
 
 export default class WelcomeInfoEntry extends React.Component {
@@ -22,5 +23,5 @@ export default class WelcomeInfoEntry extends React.Component {
     }
 }
 WelcomeInfoEntry.propTypes = {
-    timestamp: React.PropTypes.string.isRequired
+    timestamp: PropTypes.string.isRequired
 };

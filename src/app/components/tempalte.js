@@ -5,6 +5,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import Header from './header/header';
 import SongPlayer from './player/player-panel';
 
@@ -29,5 +30,5 @@ export default class Template extends React.Component {
     }
 }
 Template.propTypes = {
-    children: React.PropTypes.node.isRequired
+    children: PropTypes.node.isRequired
 };

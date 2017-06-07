@@ -10,6 +10,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class SvgIcon extends React.Component {
     render() {
@@ -27,18 +28,19 @@ export default class SvgIcon extends React.Component {
                 <title id="title">{ this.props.title }</title>
                 <use width={ this.props.width }
                      height={ this.props.height }
-                     xlinkHref={ this.props.id }/>
+                     xlinkHref={ '#' + this.props.symbol.id }/>
             </svg>
         );
     }
 }
+
 SvgIcon.propTypes = {
-    id: React.PropTypes.string.isRequired,
-    title: React.PropTypes.string.isRequired,
-    width: React.PropTypes.string.isRequired,
-    height: React.PropTypes.string.isRequired,
-    className: React.PropTypes.string,
-    style: React.PropTypes.object,
-    onClick: React.PropTypes.func,
-    onMouseEnter: React.PropTypes.func
+    symbol: PropTypes.object.isRequired,
+    title: PropTypes.string.isRequired,
+    width: PropTypes.string.isRequired,
+    height: PropTypes.string.isRequired,
+    className: PropTypes.string,
+    style: PropTypes.object,
+    onClick: PropTypes.func,
+    onMouseEnter: PropTypes.func
 };

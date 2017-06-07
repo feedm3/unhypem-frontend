@@ -10,6 +10,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import SimpleTooltip from '../common/simple-tooltip';
 import SvgIcon from '../common/svg-icon';
 import soundcloudIcon from '../../../assets/img/ic_soundcloud-black.svg';
@@ -31,8 +32,8 @@ export default class SongTableRow extends React.Component {
     }
 
     render() {
-        const { song, selected } = this.props;
-        const { isSelected, usePropsToSelect } = this.state;
+        const {song, selected} = this.props;
+        const {isSelected, usePropsToSelect} = this.state;
 
         let rowStyle = 'white';
         let tooltip = '';
@@ -69,7 +70,7 @@ export default class SongTableRow extends React.Component {
                 </td>
                 <td className="vertical-center hidden-xs">
                     <SvgIcon
-                        id={ soundcloudIcon }
+                        symbol={ soundcloudIcon }
                         title='Soundcloud'
                         width='32'
                         height='32'
@@ -84,7 +85,7 @@ export default class SongTableRow extends React.Component {
     }
 }
 SongTableRow.propTypes = {
-    song: React.PropTypes.object.isRequired,
-    onClick: React.PropTypes.func.isRequired,
-    selected: React.PropTypes.bool
+    song: PropTypes.object.isRequired,
+    onClick: PropTypes.func.isRequired,
+    selected: PropTypes.bool
 };

@@ -13,7 +13,7 @@ import skipNextIcon from '../../../assets/img/ic_skip_next_black_24px.svg';
 export default () => {
     return (
         <SvgIcon
-            id={ skipNextIcon }
+            symbol={ skipNextIcon }
             title="Forward"
             width="36px"
             height="36px"

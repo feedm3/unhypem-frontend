@@ -34,11 +34,11 @@ export default class RepeatButton extends React.Component {
         return (
             <SimpleTooltip text='Repeat current song'>
                 <SvgIcon
-                    id={repeatIcon}
+                    symbol={ repeatIcon }
                     title='Repeat'
                     width='24px'
                     height='24px'
-                    style={isActiveStyle}
+                    style={ isActiveStyle }
                     onClick={() => this.handleClick() }/>
             </SimpleTooltip>
         );

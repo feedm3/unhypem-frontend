@@ -44,11 +44,11 @@ export default class ShuffleButton extends React.Component {
         return (
             <SimpleTooltip text='Random next song'>
                 <SvgIcon
-                    id={shuffleIcon}
+                    symbol={ shuffleIcon }
                     title='Shuffle'
                     width='24px'
                     height='24px'
-                    style={isActiveStyle}
+                    style={ isActiveStyle }
                     onClick={() => this.handleClick()}
                 />
             </SimpleTooltip>

@@ -72,9 +72,7 @@ module.exports = {
             },
             {
                 test: /\.svg$/,
-                loader: 'svg-sprite-loader?' + JSON.stringify({
-                    name: '[name]_[hash]'
-                })
+                loader: 'svg-sprite-loader'
             },
             {
                 test: /\.(png|woff|woff2|eot|ttf)$/,

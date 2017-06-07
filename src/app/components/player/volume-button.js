@@ -49,7 +49,7 @@ export default class VolumeButton extends React.Component {
         return (
             <div className='popup-wrapper'>
                 <SvgIcon
-                    id={volumeIcon}
+                    symbol={ volumeIcon }
                     title="Volume"
                     width="24px"
                     height="24px"

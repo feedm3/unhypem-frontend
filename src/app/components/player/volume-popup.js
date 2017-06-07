@@ -5,6 +5,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class VolumePopup extends React.Component {
     constructor(props) {
@@ -47,7 +48,7 @@ export default class VolumePopup extends React.Component {
     }
 }
 VolumePopup.propTypes = {
-    onMouseLeave: React.PropTypes.func,
-    onProgressChange: React.PropTypes.func
+    onMouseLeave: PropTypes.func,
+    onProgressChange: PropTypes.func
 };
 

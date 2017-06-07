@@ -50,11 +50,11 @@ export default class PlayButton extends React.Component {
         }
         return (
             <SvgIcon
-                id={playOrPauseIcon}
+                symbol={ playOrPauseIcon }
                 title='Play'
                 width='48'
                 height='48'
-                className={playIconClass}
+                className={ playIconClass }
                 onClick={() => this.handleClick() }/>
         );
     }

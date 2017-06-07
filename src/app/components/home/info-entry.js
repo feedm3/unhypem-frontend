@@ -5,6 +5,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class InfoEntry extends React.Component {
     constructor(props) {
@@ -21,7 +22,7 @@ export default class InfoEntry extends React.Component {
     }
 }
 InfoEntry.propTypes = {
-    header: React.PropTypes.string.isRequired,
-    body: React.PropTypes.object.isRequired,
-    className: React.PropTypes.string
+    header: PropTypes.string.isRequired,
+    body: PropTypes.object.isRequired,
+    className: PropTypes.string
 };

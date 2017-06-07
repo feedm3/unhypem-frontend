@@ -9,6 +9,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import TetherComponent from 'react-tether';
 
 export default class SimpleTooltip extends React.Component {
@@ -58,10 +59,10 @@ export default class SimpleTooltip extends React.Component {
     }
 }
 SimpleTooltip.propTypes = {
-    children: React.PropTypes.node.isRequired,
-    text: React.PropTypes.string.isRequired,
-    attachment: React.PropTypes.oneOf(['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right']),
-    targetAttachment: React.PropTypes.oneOf(['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right'])
+    children: PropTypes.node.isRequired,
+    text: PropTypes.string.isRequired,
+    attachment: PropTypes.oneOf(['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right']),
+    targetAttachment: PropTypes.oneOf(['top left', 'top center', 'top right', 'bottom left', 'bottom center', 'bottom right'])
 };
 SimpleTooltip.defaultProps = {
     attachment: 'top center'
