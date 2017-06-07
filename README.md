@@ -5,7 +5,8 @@
 
 Hear the [hypem charts](http://hypem.com/popular) with the waveform from soundcloud to explore great music faster than ever.
 
-This repo is used for all unhypem frontend stuff.
+This repo is used for all unhypem frontend stuff. 
+Backend stuff can be found in a separate [unhypem-backend](https://github.com/feedm3/unhypem-backend) repo.
 
 ## Development
 

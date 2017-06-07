@@ -26,7 +26,6 @@ export default () => {
                 </HashRouter>
             </div>
             <div className="bottom">
-                { /* TODO: put this in own bottom component */ }
                 <SongPlayer />
             </div>
         </div>

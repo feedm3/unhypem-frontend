@@ -27,12 +27,7 @@ function requestSongs(done) {
     callbacks.push(done);
     if (callbacks.length >= 2) return;
 
-    // in production the host is the same as the page but in development mode the host is
-    // on a different port
-    let host = 'https://unhypem-backend.herokuapp.com/';
-    // if (window.location.hostname === 'localhost') {
-    //     host = 'http://localhost:3000/';
-    // }
+    const host = 'https://unhypem-backend.herokuapp.com/';
 
     request.get(host + 'charts')
         .end((err, response) => {
@@ -41,6 +36,8 @@ function requestSongs(done) {
             const popular = JSON.parse(response.text);
 
             const songsArray = [];
+
+            // we have to use a for loop as the songs object is not an array but an object
             for (let i = 1; i <= 50; i++) {
                 const song = popular.songs[i];
                 song.id = song.hypemMediaId;
